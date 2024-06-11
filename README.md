@@ -23,7 +23,7 @@
 <br />
 <div>
   <a href="https://github.com/andresjpulido/MIDIKeyLinker">
-    <img src="icon/logo.svg" alt="Logo" width="80" height="80">
+    <img src="resources/icon/logo.svg" alt="Logo" width="150" height="150">
   </a>
 
   <h3 >MIDI KeyLinker</h3>
