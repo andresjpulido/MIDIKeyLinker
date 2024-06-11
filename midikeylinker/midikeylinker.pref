@@ -1,0 +1,23 @@
+{
+
+    "settings": "",
+    "devices":[
+        {
+            "name": "device 1",
+            "icon": "",
+            "description":"Description of the Midi device",
+            "actions":[
+                {
+                    "name":"action 1",
+                    "midiCommand":"",
+                    "osCommand":"Ctrl+n"
+                }
+            ]
+        },
+        {
+            "name": "device 2",
+            "icon": "./resources/icon/3 knob.webp",
+            "description":"Description of the Midi device"
+        } 
+    ]
+}
