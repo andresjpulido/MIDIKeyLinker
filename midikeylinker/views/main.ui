@@ -200,7 +200,7 @@ QStatusBar {
             <property name="maximumSize">
              <size>
               <width>20</width>
-              <height>130</height>
+              <height>180</height>
              </size>
             </property>
             <property name="toolTip">
@@ -211,10 +211,6 @@ QStatusBar {
             </property>
             <property name="text">
              <string/>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>icon/arrow-prev.svg</normaloff>icon/arrow-prev.svg</iconset>
             </property>
            </widget>
           </item>
@@ -514,7 +510,7 @@ QStatusBar {
      <x>0</x>
      <y>0</y>
      <width>850</width>
-     <height>21</height>
+     <height>24</height>
     </rect>
    </property>
    <property name="styleSheet">

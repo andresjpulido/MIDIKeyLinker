@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'midikeylinker/main.ui'
+# Form implementation generated from reading ui file 'midikeylinker/views/main.ui'
 #
 # Created by: PyQt6 UI code generator 6.6.1
 #
@@ -14,7 +14,7 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(850, 650)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("midikeylinker/icon/midi.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("midikeylinker/views/icon/midi.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setAutoFillBackground(True)
         MainWindow.setStyleSheet("QMainWindow {\n"
@@ -100,12 +100,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.listWidget)
         self.pushButton = QtWidgets.QPushButton(parent=self.frame_2)
         self.pushButton.setMinimumSize(QtCore.QSize(0, 0))
-        self.pushButton.setMaximumSize(QtCore.QSize(20, 130))
+        self.pushButton.setMaximumSize(QtCore.QSize(20, 180))
         self.pushButton.setAutoFillBackground(False)
         self.pushButton.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("midikeylinker/icon/arrow-prev.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.pushButton.setIcon(icon1)
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout.addWidget(self.pushButton)
         self.frame_4 = QtWidgets.QFrame(parent=self.frame_2)
@@ -146,7 +143,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(parent=self.frame_3)
         self.label.setGeometry(QtCore.QRect(780, 10, 31, 31))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("midikeylinker/icon/play-circle.svg"))
+        self.label.setPixmap(QtGui.QPixmap("midikeylinker/views/icon/play-circle.svg"))
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setObjectName("label")
         self.lineEdit_2 = QtWidgets.QLineEdit(parent=self.frame_3)
@@ -213,7 +210,7 @@ class Ui_MainWindow(object):
         self.label_2.setGeometry(QtCore.QRect(10, 10, 350, 100))
         self.label_2.setMaximumSize(QtCore.QSize(350, 100))
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("midikeylinker/icon/computer-keyboard.svg"))
+        self.label_2.setPixmap(QtGui.QPixmap("midikeylinker/views/icon/computer-keyboard.svg"))
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
         self.lineEdit = QtWidgets.QLineEdit(parent=self.frame_5)
@@ -226,13 +223,13 @@ class Ui_MainWindow(object):
         self.label_3 = QtWidgets.QLabel(parent=self.frame_5)
         self.label_3.setGeometry(QtCore.QRect(790, 10, 31, 31))
         self.label_3.setText("")
-        self.label_3.setPixmap(QtGui.QPixmap("midikeylinker/icon/play-circle.svg"))
+        self.label_3.setPixmap(QtGui.QPixmap("midikeylinker/views/icon/play-circle.svg"))
         self.label_3.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_3.setObjectName("label_3")
         self.verticalLayout.addWidget(self.frame_5)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menuBar = QtWidgets.QMenuBar(parent=MainWindow)
-        self.menuBar.setGeometry(QtCore.QRect(0, 0, 850, 21))
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 850, 24))
         self.menuBar.setStyleSheet("")
         self.menuBar.setNativeMenuBar(False)
         self.menuBar.setObjectName("menuBar")

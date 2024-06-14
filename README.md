@@ -117,7 +117,7 @@ Below is the list of libraries required to compile this application.
 ### Execution
 
 ```sh 
-python app.py
+python midikeylinker/app.py
 ```
 
 ### Development
@@ -133,7 +133,7 @@ pyqt6-tools designer
 This command generates a Python module according to the given options:
  
 ```sh 
-pyuic6 main.ui -o main.py
+pyuic6 midikeylinker/views/main.ui -o midikeylinker/views/main.py
 ```
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

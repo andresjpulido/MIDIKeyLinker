@@ -28,10 +28,10 @@ class MainWindow(QMainWindow):
 
         # Initialize the UI from the generated 'main_ui' class
         self.ui = Ui_MainWindow()
-        self.ui.setupUi(self)
+        self.ui.setupUi(self)  
 
         # Set window properties
-        self.setWindowIcon(QIcon("./icon/logo.svg"))
+        self.setWindowIcon(QIcon("./resources/icon/logo.svg"))
         self.setWindowTitle("MIDI KeyLinker")
         self.listWidget = self.ui.listWidget
         self.detail_btn = self.ui.pushButton
@@ -62,8 +62,7 @@ class MainWindow(QMainWindow):
         self.label_keyboard_computer.update()
 
         self.installEventFilter(self)
-
-         
+ 
         self.qaction = self.ui.actionQuit 
         self.qaction.triggered.connect(self.quit)
         self.openFileAction = self.ui.openFileAction 
@@ -72,6 +71,7 @@ class MainWindow(QMainWindow):
         self.saveFileAction.triggered.connect(self.saveFile)
         self.saveFileAsAction = self.ui.saveAsAction 
         self.saveFileAsAction.triggered.connect(self.saveFileAs)
+        
 
         #TODO validate file exist
         self.loadFile(os.path.join(os.getcwd(), "midikeylinker/midikeylinker.pref"))
@@ -90,14 +90,12 @@ class MainWindow(QMainWindow):
                 f.write("este texto")
             self.fileName = fileName
             self.setWindowTitle(str(os.path.basename(fileName)) + " - Notepad Alpha[*]")
-
-
+ 
     def openFile(self):    
         fname = QFileDialog.getOpenFileName(self, 'Open file', '.',"Image files (*.pref)") 
-        print(fname)
+        #print(fname)
         if type(fname) == tuple: 
-            self.loadFile(fname[0])
-        
+            self.loadFile(fname[0]) 
     
     def loadFile(self, fname):
         print(fname)
@@ -141,9 +139,7 @@ class MainWindow(QMainWindow):
         self.show()
 
     def test(self):
-        print("this is a test")
-
-    
+        print("this is a test") 
 
     def init_list_widget(self):
         self.listWidget.clear()
@@ -155,10 +151,11 @@ class MainWindow(QMainWindow):
             # Create widget
             widget = QWidget()
             widget.setCursor(QCursor(Qt.CursorShape.OpenHandCursor))
-
+ 
             widgetText = QLabel("")
             if len(menu.get("icon")) != 0:
                 pixmap = QPixmap(menu.get("icon"))
+                
             else:
                 pixmap = QPixmap("./resources/icon/generic-midi-device.svg")
             pixmap.scaledToHeight(100)
@@ -183,6 +180,7 @@ class MainWindow(QMainWindow):
             
             itemN.setSizeHint(widget.sizeHint())
             itemN.setBackground(QColor(45, 44, 44, 0))
+            itemN.text= 'x'
             widget.setStatusTip( menu.get("name"))  
 
             self.popMenu = QMenu(self)
@@ -205,7 +203,18 @@ class MainWindow(QMainWindow):
             self.detail_btn.setIcon(QIcon("./resources/icon/arrow-next.svg"))
         else:
             self.detail_btn.setIcon(QIcon("./resources/icon/arrow-prev.svg"))
-  
+
+    def delete_device(self):
+        item = self.listWidget.currentItem()
+        index = self.listWidget.indexFromItem(item).row()
+        self.listWidget.takeItem(index)
+         
+    def edit_device(self): 
+        print('edit_device')
+        
+    def test_device(self): 
+        print('test_device')
+
     def eventFilter(self, source, event): 
         #self.shortcut_open = QShortcut(QKeySequence('Ctrl+O'), self)
 
@@ -215,15 +224,21 @@ class MainWindow(QMainWindow):
  
         if event.type() ==  QEvent.Type.ContextMenu and source is self.listWidget:
             menu = QMenu()
-            menu.addAction('Edit')
-            menu.addAction('Delete')
-            menu.addAction('Test')
+            
+            edit_device_action = QAction("Edit", None)
+            edit_device_action.triggered.connect(self.edit_device)
+            menu.addAction(edit_device_action)  
 
-            if menu.exec(event.globalPos()):
-                item = source.itemAt(event.pos())
-                print(item.text())
+            test_device_Action = QAction("Test", None)
+            test_device_Action.triggered.connect(self.test_device)
+            menu.addAction(test_device_Action)
+
+            delete_device_Action = QAction("Delete", None)
+            delete_device_Action.triggered.connect(self.delete_device)
+            menu.addAction(delete_device_Action)           
+ 
+            menu.exec(event.globalPos())
+ 
             return True
         
         return super().eventFilter(source, event)
-
- 
