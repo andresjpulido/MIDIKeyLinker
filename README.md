@@ -138,7 +138,9 @@ pyuic6 midikeylinker/views/main.ui -o midikeylinker/views/main.py
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+```sh 
+conda env export > environment.yml
+```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
