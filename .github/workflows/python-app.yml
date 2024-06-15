@@ -15,10 +15,8 @@ permissions:
 jobs:
   create-conda-env:
     name: create-conda-env Linux
-    runs-on: "ubuntu-latest"
-    defaults:
-      run:
-        shell: bash -el {0}
+    runs-on: "macos-latest"
+    
     steps:
       - uses: actions/checkout@v4
       - uses: conda-incubator/setup-miniconda@v3
