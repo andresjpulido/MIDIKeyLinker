@@ -1,0 +1,47 @@
+name: MIDIKeyLinker
+channels:
+  - defaults
+dependencies:
+  - bzip2=1.0.8=h80987f9_5
+  - ca-certificates=2024.3.11=hca03da5_0
+  - expat=2.5.0=h313beb8_0
+  - libcxx=14.0.6=h848a8c0_0
+  - libffi=3.4.4=hca03da5_0
+  - ncurses=6.4=h313beb8_0
+  - openssl=3.0.13=h1a28f6b_0
+  - pip=23.3.1=py312hca03da5_0
+  - python=3.12.2=h99e199e_0
+  - readline=8.2=h1a28f6b_0
+  - setuptools=68.2.2=py312hca03da5_0
+  - sqlite=3.41.2=h80987f9_0
+  - tk=8.6.12=hb8d0fd4_0
+  - wheel=0.41.2=py312hca03da5_0
+  - xz=5.4.6=h80987f9_0
+  - zlib=1.2.13=h5a0b063_0
+  - pip:
+      - mouseinfo==0.1.3
+      - numpy==1.26.4
+      - pandas==2.2.2
+      - pyautogui==0.9.54
+      - pygetwindow==0.0.9
+      - pymsgbox==1.0.9
+      - pyobjc-core==10.2
+      - pyobjc-framework-cocoa==10.2
+      - pyobjc-framework-quartz==10.2
+      - pyperclip==1.8.2
+      - pyqt5==5.15.10
+      - pyqt5-qt5==5.15.13
+      - pyqt5-sip==12.13.0
+      - pyqt6==6.6.1
+      - pyqt6-qt6==6.6.3
+      - pyqt6-sip==13.6.0
+      - pyrect==0.2.0
+      - pyscreeze==0.1.30
+      - python-dateutil==2.9.0.post0
+      - python-rtmidi==1.5.8
+      - pytweening==1.2.0
+      - pytz==2024.1
+      - rubicon-objc==0.4.8
+      - six==1.16.0
+      - tzdata==2024.1
+prefix: /Users/andrespulido/anaconda3/envs/MIDIKeyLinker

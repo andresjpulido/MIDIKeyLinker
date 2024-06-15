@@ -13,9 +13,6 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(850, 650)
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("midikeylinker/views/icon/midi.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        MainWindow.setWindowIcon(icon)
         MainWindow.setAutoFillBackground(True)
         MainWindow.setStyleSheet("QMainWindow {\n"
 "    \n"
@@ -114,6 +111,9 @@ class Ui_MainWindow(object):
         self.checkBox = QtWidgets.QCheckBox(parent=self.frame_4)
         self.checkBox.setGeometry(QtCore.QRect(10, 60, 85, 20))
         self.checkBox.setObjectName("checkBox")
+        self.label_4 = QtWidgets.QLabel(parent=self.frame_4)
+        self.label_4.setGeometry(QtCore.QRect(30, 0, 58, 176))
+        self.label_4.setObjectName("label_4")
         self.horizontalLayout.addWidget(self.frame_4)
         self.verticalLayout_2.addWidget(self.frame_2)
         self.frame_3 = QtWidgets.QFrame(parent=self.frame)
@@ -292,6 +292,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setToolTip(_translate("MainWindow", "See MIDI device details"))
         self.checkBox.setText(_translate("MainWindow", "CheckBox"))
+        self.label_4.setText(_translate("MainWindow", "TextLabel"))
         self.linkButton.setText(_translate("MainWindow", "Link"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.menuExperimental.setStatusTip(_translate("MainWindow", "Experimental options"))

@@ -215,6 +215,9 @@ class MainWindow(QMainWindow):
     def test_device(self): 
         print('test_device')
 
+    def update_icon_device(self): 
+        print('update_icon_device')
+
     def eventFilter(self, source, event): 
         #self.shortcut_open = QShortcut(QKeySequence('Ctrl+O'), self)
 
@@ -228,6 +231,10 @@ class MainWindow(QMainWindow):
             edit_device_action = QAction("Edit", None)
             edit_device_action.triggered.connect(self.edit_device)
             menu.addAction(edit_device_action)  
+
+            update_icon_device_action = QAction("Update icon", None)
+            update_icon_device_action.triggered.connect(self.update_icon_device)
+            menu.addAction(update_icon_device_action) 
 
             test_device_Action = QAction("Test", None)
             test_device_Action.triggered.connect(self.test_device)
