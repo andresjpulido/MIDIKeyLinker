@@ -30,6 +30,23 @@ jobs:
           conda list
 
  
+  create-conda-env-windows:
+    name: create-conda-env windows
+    runs-on: "windows-latest" 
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: midiKeyLinker_env
+          environment-file: environment.yml
+          python-version: 3.12
+           
+          auto-activate-base: false
+      - run: |
+          conda info
+          conda list
+
+
   create-conda-env-linux:
     name: create-conda-env linux
     runs-on: "ubuntu-latest"
@@ -43,8 +60,11 @@ jobs:
           activate-environment: midiKeyLinker_env
           environment-file: environment.yml
           python-version: 3.12
-           
-          auto-activate-base: false
+          channels: conda-forge,spyder-ide
+          allow-softlinks: true
+          channel-priority: flexible
+          show-channel-urls: true
+          use-only-tar-bz2: true
       - run: |
           conda info
           conda list

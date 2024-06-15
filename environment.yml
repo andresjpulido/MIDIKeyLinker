@@ -38,4 +38,3 @@ dependencies:
       - pyqt6==6.7.0
       - pyqt6-qt6==6.7.1
       - pyqt6-sip==13.6.0
-prefix: /Users/andrespulido/anaconda3/envs/midiKeyLinker_env
